@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shorty.Api", "Shorty.Api\Shorty.Api.csproj", "{2E07EDD7-DC2A-4FE3-A563-CF5E5FBD13D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shorty.Application", "Shorty.Application\Shorty.Application.csproj", "{04023652-3117-491F-96A9-11D043CCDCAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shorty.Core", "Shorty.Core\Shorty.Core.csproj", "{B6BCC49E-7EC8-41A0-BCF6-7F16756481E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shorty.Db", "Shorty.Db\Shorty.Db.csproj", "{176AA806-61F4-4EFF-A32F-6524C21994C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{7DB4F759-D3BC-4BFD-ACF7-496FB939A208}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.inf.yml = docker-compose.inf.yml
+		ShortyApi.Dockerfile = ShortyApi.Dockerfile
+		ShortyRedirectApi.Dockerfile = ShortyRedirectApi.Dockerfile
+		docker-compose.yml = docker-compose.yml
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shorty.Exceptions", "Shorty.Exceptions\Shorty.Exceptions.csproj", "{D6B0714F-7B68-4409-BA90-895604EDD2D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shorty.RedirectApi", "Shorty.RedirectApi\Shorty.RedirectApi.csproj", "{3803D434-2433-40E1-8470-44C170ECD0FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ngnix", "ngnix", "{2AF5B614-E0A7-43AA-A43C-62A3D6A2EA24}"
+	ProjectSection(SolutionItems) = preProject
+		ngnix\conf = ngnix\conf
+		ngnix\Dockerfile = ngnix\Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{CE6FA46E-7491-4552-B9F8-FAFC7AB4DDBD}"
+	ProjectSection(SolutionItems) = preProject
+		doc\Shorty.drawio.png = doc\Shorty.drawio.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E07EDD7-DC2A-4FE3-A563-CF5E5FBD13D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E07EDD7-DC2A-4FE3-A563-CF5E5FBD13D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E07EDD7-DC2A-4FE3-A563-CF5E5FBD13D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E07EDD7-DC2A-4FE3-A563-CF5E5FBD13D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04023652-3117-491F-96A9-11D043CCDCAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04023652-3117-491F-96A9-11D043CCDCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04023652-3117-491F-96A9-11D043CCDCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04023652-3117-491F-96A9-11D043CCDCAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6BCC49E-7EC8-41A0-BCF6-7F16756481E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6BCC49E-7EC8-41A0-BCF6-7F16756481E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6BCC49E-7EC8-41A0-BCF6-7F16756481E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6BCC49E-7EC8-41A0-BCF6-7F16756481E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{176AA806-61F4-4EFF-A32F-6524C21994C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{176AA806-61F4-4EFF-A32F-6524C21994C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{176AA806-61F4-4EFF-A32F-6524C21994C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{176AA806-61F4-4EFF-A32F-6524C21994C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6B0714F-7B68-4409-BA90-895604EDD2D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6B0714F-7B68-4409-BA90-895604EDD2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6B0714F-7B68-4409-BA90-895604EDD2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6B0714F-7B68-4409-BA90-895604EDD2D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3803D434-2433-40E1-8470-44C170ECD0FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3803D434-2433-40E1-8470-44C170ECD0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3803D434-2433-40E1-8470-44C170ECD0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3803D434-2433-40E1-8470-44C170ECD0FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2AF5B614-E0A7-43AA-A43C-62A3D6A2EA24} = {7DB4F759-D3BC-4BFD-ACF7-496FB939A208}
+		{CE6FA46E-7491-4552-B9F8-FAFC7AB4DDBD} = {7DB4F759-D3BC-4BFD-ACF7-496FB939A208}
+	EndGlobalSection
+EndGlobal

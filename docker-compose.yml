@@ -1,0 +1,55 @@
+version: "3.4"
+
+services:
+  
+  shorty-api:
+    image: shorty-api:latest
+    build:
+      context: .
+      dockerfile: ShortyApi.Dockerfile
+    expose:
+      - "8081"
+    depends_on:
+      - shorty-postgres-server
+    links:
+      - shorty-postgres-server
+    environment:
+      - ConnectionStrings:ShortyDb=Host=shorty-postgres-server;Port=5432;Database=shorty;Username=postgres;Password=postgres
+      - ASPNETCORE_URLS=http://+:8081
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+        max_attempts: 5
+
+  shorty-redirect-api:
+    image: shorty-redirect-api:latest
+    build:
+      context: .
+      dockerfile: ShortyRedirectApi.Dockerfile
+    expose:
+      - "8082"
+    depends_on:
+      - shorty-postgres-server
+      - shorty-redis
+    links:
+      - shorty-postgres-server
+      - shorty-redis
+    environment:
+      - ConnectionStrings:ShortyDb=Host=shorty-postgres-server;Port=5432;Database=shorty;Username=postgres;Password=postgres
+      - ConnectionStrings:ShortyRedis=shorty-redis:6379,abortConnect=false
+      - ASPNETCORE_URLS=http://+:8082
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+        max_attempts: 5
+      
+  shorty-px:
+    build: ngnix
+    ports:
+      - "5011:5001"
+      - "5012:5002"
+    depends_on:
+      - shorty-api
+      - shorty-redirect-api
